@@ -7,7 +7,7 @@ static uint64_t FNV_64_PRIME = UINT64_C(0x100000001b3);
 static uint32_t FNV_32_INIT = 2166136261UL;
 static uint32_t FNV_32_PRIME = 16777619;
 
-uint64_t hash_fnv1_64(const char *key, size_t key_length){
+uint64_t hash_fnv1_64(const unsigned char *key, size_t key_length){
 
     uint64_t hash = FNV_64_INIT;
     size_t x;
@@ -20,7 +20,7 @@ uint64_t hash_fnv1_64(const char *key, size_t key_length){
     return hash;
 }
 
-uint64_t hash_fnv1a_64(const char *key, size_t key_length){
+uint64_t hash_fnv1a_64(const unsigned char *key, size_t key_length){
     uint64_t hash = (uint64_t) FNV_64_INIT;
     size_t x;
 
@@ -33,7 +33,7 @@ uint64_t hash_fnv1a_64(const char *key, size_t key_length){
     return hash;
 }
 
-uint32_t hash_fnv1_32(const char *key, size_t key_length){
+uint32_t hash_fnv1_32(const unsigned char *key, size_t key_length){
     uint32_t hash = FNV_32_INIT;
     size_t x;
 
@@ -46,7 +46,7 @@ uint32_t hash_fnv1_32(const char *key, size_t key_length){
     return hash;
 }
 
-uint32_t hash_fnv1a_32(const char *key, size_t key_length){
+uint32_t hash_fnv1a_32(const unsigned char *key, size_t key_length){
     uint32_t hash = FNV_32_INIT;
     size_t x;
 

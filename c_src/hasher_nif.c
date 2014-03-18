@@ -9,10 +9,10 @@ static ERL_NIF_TERM nif_hasher_fnv1_32(ErlNifEnv *env, int argc,const ERL_NIF_TE
 static ERL_NIF_TERM nif_hasher_fnv1a_32(ErlNifEnv *env, int argc,const ERL_NIF_TERM argv[]);
 
 static ErlNifFunc nif_funcs[] = {
-	 {"hasher_murmur2", 1, nif_hasher_murmur2}
-	 {"hasher_fnv1_64", 1, nif_hasher_fnv1_64}
-	 {"hasher_fnv1a_64", 1, nif_hasher_fnv1a_64}
-	 {"hasher_fnv1_32", 1, nif_hasher_fnv1_32}
+	 {"hasher_murmur2", 1, nif_hasher_murmur2},
+	 {"hasher_fnv1_64", 1, nif_hasher_fnv1_64},
+	 {"hasher_fnv1a_64", 1, nif_hasher_fnv1a_64},
+	 {"hasher_fnv1_32", 1, nif_hasher_fnv1_32},
 	 {"hasher_fnv1a_32", 1, nif_hasher_fnv1a_32}
 
 };
