@@ -6,7 +6,7 @@
 -module(hasher).
 -version(0.1).
 
--export([murmur2/1]).
+-export([murmur2/1,fnv1_64/1,fnv1a_64/1,fnv1_32/1,fnv1a_32/1]).
 
 -on_load(init/0).
 
@@ -42,9 +42,18 @@ init() ->
 %%%=============================================================================
 %%% Nif functions
 %%%=============================================================================
-
 hasher_murmur2(_Data) ->
   ?nif_stub.
+hasher_fnv1_64(_Data) ->
+  ?nif_stub.
+hasher_fnv1a_64(_Data) ->
+  ?nif_stub.
+hasher_fnv1_32(_Data) ->
+  ?nif_stub.
+hasher_fnv1a_32(_Data) ->
+  ?nif_stub.
+
+
 %%%=============================================================================
 %%% Exports
 %%%=============================================================================
@@ -52,6 +61,22 @@ hasher_murmur2(_Data) ->
 -spec murmur2(Data::hash_input()) -> hash_digest().
 murmur2(Data)->
 	hasher_murmur2(supported_to_binary(Data)).
+
+-spec fnv1_64(Data::hash_input()) -> hash_digest().
+fnv1_64(Data)->
+	hasher_fnv1_64(supported_to_binary(Data)).
+
+-spec fnv1a_64(Data::hash_input()) -> hash_digest().
+fnv1a_64(Data)->
+	hasher_fnv1a_64(supported_to_binary(Data)).
+
+-spec fnv1_32(Data::hash_input()) -> hash_digest().
+fnv1_32(Data)->
+	hasher_fnv1_32(supported_to_binary(Data)).
+
+-spec fnv1a_32(Data::hash_input()) -> hash_digest().
+fnv1a_32(Data)->
+	hasher_fnv1a_32(supported_to_binary(Data)).
 
 %%%=============================================================================
 %%% Helpers
