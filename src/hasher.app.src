@@ -1,0 +1,11 @@
+{application, hasher,
+  [
+    {description, "Hash Functions for Erlang."},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [kernel,
+                    stdlib]},
+    {modules, [hasher]},
+    {env, []}
+  ]
+}.
