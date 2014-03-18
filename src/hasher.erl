@@ -1,6 +1,6 @@
-%%% @author Pierre Matri  <pierre@matri.me>
+%%% @author David.Gao  <david.alpha.fox@gmail.com>
 %%%
-%%% @copyright 2013 Pierre Matri, All rights reserved. Open source, MIT License.
+%%% @copyright 2013 
 %%% @version 0.1.0
 
 -module(hasher).
